@@ -1,0 +1,170 @@
+import React from 'react';
+
+interface UrbanDecorLogoProps {
+  className?: string;
+  withBackground?: boolean;
+}
+
+export const UrbanDecorLogo: React.FC<UrbanDecorLogoProps> = ({
+  className = 'h-12 w-auto',
+  withBackground = false,
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 675"
+      fill="none"
+      className={className}
+      aria-label="URBAN DECOR – Wallcovering"
+    >
+      {/* Optional warm cream / beige canvas matching the uploaded image */}
+      {withBackground && (
+        <rect width="1200" height="675" fill="#EAE2D8" rx="8" />
+      )}
+
+      <g id="urban-decor-official-logo">
+        {/* ==================== U / WALLPAPER EMBLEM ==================== */}
+        <g id="wallpaper-roll-u" fill="#7D634C">
+          {/* Outer Taupe U-Bracket with contoured top lips */}
+          <path d="M 75 75 
+                   C 85 75, 95 85, 95 95 
+                   L 95 245 
+                   C 95 305, 125 338, 165 338 
+                   C 205 338, 235 305, 235 245 
+                   L 235 95 
+                   C 235 85, 245 75, 255 75 
+                   L 255 245 
+                   C 255 330, 215 375, 165 375 
+                   C 115 375, 75 330, 75 245 
+                   Z" />
+
+          {/* Inside Unfurling Wallpaper Sheet */}
+          <path d="M 100 115 
+                   C 112 100, 155 88, 185 96
+                   C 205 102, 222 92, 230 110
+                   L 230 250
+                   C 215 260, 180 250, 160 256
+                   C 138 262, 120 278, 100 272
+                   Z" />
+
+          {/* Embossed Horizontal Wave Lines */}
+          <path d="M 103 138 Q 165 124 227 136" stroke="#EAE2D8" strokeWidth="4.5" strokeLinecap="round" fill="none" />
+          <path d="M 102 168 Q 165 152 225 166" stroke="#EAE2D8" strokeWidth="4.5" strokeLinecap="round" fill="none" />
+          <path d="M 102 198 Q 162 182 224 196" stroke="#EAE2D8" strokeWidth="4.5" strokeLinecap="round" fill="none" />
+          <path d="M 103 228 Q 160 214 220 226" stroke="#EAE2D8" strokeWidth="4" strokeLinecap="round" fill="none" />
+
+          {/* Bottom Rolled Wallpaper Cylinder & Core */}
+          <g id="roll-core" transform="translate(108, 240)">
+            <path d="M 12 25 L 75 14 C 88 14, 95 24, 93 42 C 90 60, 78 72, 62 74 L 12 80 Z" fill="#7D634C" stroke="#EAE2D8" strokeWidth="3" />
+            <ellipse cx="18" cy="52" rx="18" ry="26" fill="#7D634C" stroke="#EAE2D8" strokeWidth="4" />
+            <ellipse cx="18" cy="52" rx="11" ry="16" fill="#EAE2D8" stroke="#7D634C" strokeWidth="3" />
+            <ellipse cx="18" cy="52" rx="5" ry="8" fill="#7D634C" />
+          </g>
+        </g>
+
+        {/* ==================== "R B A N" (CHARCOAL) ==================== */}
+        <g id="letters-rban" fill="#23211F">
+          {/* Letter R */}
+          <g id="letter-r">
+            <rect x="276" y="96" width="13" height="240" />
+            <polygon points="264,96 298,96 291,105 276,105" />
+            <polygon points="264,336 304,336 291,327 276,327" />
+            <path d="M 289 96 
+                     L 380 96 
+                     C 426 96, 452 118, 452 150 
+                     C 452 182, 422 202, 380 202 
+                     L 289 202 
+                     Z
+                     M 289 110 
+                     L 375 110 
+                     C 405 110, 434 124, 434 150 
+                     C 434 174, 405 188, 375 188 
+                     L 289 188 
+                     Z" />
+            {/* Signature flourish: Leg of R swooping down into E of DECOR */}
+            <path d="M 362 195 
+                     C 378 195, 402 208, 418 228 
+                     C 440 256, 468 285, 510 280 
+                     C 498 270, 474 250, 450 225 
+                     C 430 204, 408 192, 382 190 
+                     Z" />
+          </g>
+
+          {/* Letter B */}
+          <g id="letter-b">
+            <rect x="492" y="96" width="13" height="240" />
+            <polygon points="480,96 514,96 507,105 492,105" />
+            <polygon points="480,336 520,336 507,327 492,327" />
+            <path d="M 505 96 L 595 96 C 632 96, 654 116, 654 142 C 654 162, 634 176, 602 178 L 505 178 Z M 505 108 L 590 108 C 616 108, 636 120, 636 141 C 636 158, 616 166, 590 166 L 505 166 Z" />
+            <path d="M 505 276 L 610 276 C 648 276, 674 292, 674 316 C 674 336, 646 336, 605 336 L 505 336 Z M 505 288 L 602 288 C 630 288, 654 300, 654 316 C 654 326, 632 326, 602 326 L 505 326 Z" />
+          </g>
+
+          {/* Letter A */}
+          <g id="letter-a">
+            <polygon points="735,336 744,336 805,96 794,96" />
+            <polygon points="794,96 808,96 874,336 850,336 802,120 794,96" />
+            <polygon points="722,336 754,336 746,330 732,330" />
+            <polygon points="840,336 886,336 872,330 852,330" />
+            <polygon points="786,96 816,96 802,102" />
+            <rect x="755" y="246" width="90" height="5" />
+          </g>
+
+          {/* Letter N (Architectural Arch) */}
+          <g id="letter-n">
+            <path d="M 896 336 
+                     L 896 170 
+                     C 896 112, 936 96, 975 96 
+                     C 1014 96, 1044 116, 1054 148 
+                     L 1054 336 
+                     L 1038 336 
+                     L 1038 152 
+                     C 1032 128, 1008 112, 975 112 
+                     C 942 112, 912 124, 912 174 
+                     L 912 336 
+                     Z" />
+            <polygon points="884,336 918,336 910,330 890,330" />
+            <rect x="1090" y="96" width="13" height="240" />
+            <polygon points="1078,96 1112,96 1105,105 1090,105" />
+            <polygon points="1078,336 1118,336 1105,327 1090,327" />
+          </g>
+        </g>
+
+        {/* ==================== "DECOR" (MONOLINE GEOMETRIC) ==================== */}
+        <g id="letters-decor" stroke="#23211F" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+          {/* D */}
+          <path d="M 75 365 L 75 490 M 75 365 C 136 365, 172 390, 172 428 C 172 466, 136 490, 75 490" />
+
+          {/* E (With connection curve from R above) */}
+          <path d="M 345 320 C 375 345, 395 375, 360 405 C 330 430, 275 410, 235 410 L 235 490 L 325 490" />
+          <path d="M 235 365 L 325 365" />
+          <path d="M 235 428 C 275 428, 305 412, 305 395" />
+
+          {/* C */}
+          <path d="M 465 385 C 445 370, 415 368, 390 388 C 362 410, 362 445, 390 468 C 415 488, 445 484, 465 470" />
+
+          {/* O */}
+          <ellipse cx="538" cy="428" rx="48" ry="62" />
+
+          {/* R */}
+          <path d="M 632 365 L 632 490" />
+          <path d="M 632 365 C 690 365, 712 382, 712 408 C 712 430, 688 445, 638 445" />
+          <path d="M 672 440 C 695 448, 735 470, 770 490" />
+        </g>
+
+        {/* ==================== "WALLCOVERING" (WARM TAUPE SERIF) ==================== */}
+        <g id="wallcovering-text" fill="#7D634C">
+          <text
+            x="795"
+            y="484"
+            fontFamily="'Cormorant Garamond', Georgia, serif"
+            fontSize="52"
+            letterSpacing="8"
+            fontWeight="600"
+          >
+            WALLCOVERING
+          </text>
+        </g>
+      </g>
+    </svg>
+  );
+};
